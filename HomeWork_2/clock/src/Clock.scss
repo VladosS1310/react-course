@@ -1,0 +1,19 @@
+.clock {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  span {
+    position: relative;
+    top: 25%;
+    font-size: 15rem;
+  }
+}
+

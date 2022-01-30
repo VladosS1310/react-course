@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+#App-wrapper {
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    min-height: 100vh;
+}
+.slider {
+    background: #fff;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.slides {
+    position: relative;
+    display: flex;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    flex-grow: 0;
+    flex-shrink: 0;
+    z-index: -1;
+}
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+.slide_thumbnail {
+    height: 300px;
+    margin-bottom: 30px;
+}
+.slide_thumbnail img {
+    display: block;
+    width: 100%;
+}
+.slide_content {
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    margin-bottom: 20px;
+    padding: 10px 8px 0;
+}
+.slide_content .title {
+    font-size: 18px;
+    color: #fb6600;
+    font-weight: 700;
+}
+.slide_content p .segment {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .4s .1s;
+    transition: opacity .4s .1s;
+}
+.expand .slide_content p .segment {
+    opacity: 1;
+    visibility: visible;
+}
+.expand .slide_content {
+    transform: translateY(0);
+    background: #fff;
+}
+.slide_footer {
+    position: relative;
+    z-index: 10;
+    padding: 0 8px;
+}
+.slide_footer .slide_btn {
+    z-index: 100;
+    background: transparent;
+    border: none;
+    color: #fb6600;
+    text-align: left;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+.slider_footer {
+    z-index: 10;
+    position: relative;
+    padding: 10px 8px;
+}
+.slider_footer button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 5px 20px;
+    margin-right: 3px;
+    border-radius: 5px;
+    color: #fb6600;
+    background: linear-gradient(180deg,#e0e0e0 0,#dbdbdb 33%,#cfcfcf 51%,#c7c7c7);
+}
