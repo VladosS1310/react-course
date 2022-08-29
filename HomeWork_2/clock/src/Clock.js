@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import './Clock.scss';
 
 function Clock() {
@@ -49,8 +49,10 @@ function Clock() {
     setNext(next + 1 === arrayFormats.length ? 0 : next + 1);
   }
 
+  const clickHandler = useCallback(() => clickAnywhere(), [clickAnywhere])
+
   return (
-      <div className="clock" onClick={() => clickAnywhere()} style={{background : `#${bgColor}`}}>
+      <div className="clock" onClick={clickHandler} style={{background : `#${bgColor}`}}>
         <h1>Click anywhere to change formats</h1>
         <span>{arrayFormats[next]}</span>
       </div>
