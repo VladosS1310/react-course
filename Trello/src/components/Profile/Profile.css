@@ -1,0 +1,9 @@
+.profile-container {
+    padding: 0 20px;
+}
+.profile-container .profile-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px grey;
+    padding: 20px;
+}

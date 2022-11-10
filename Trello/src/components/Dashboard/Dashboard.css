@@ -1,0 +1,7 @@
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+}

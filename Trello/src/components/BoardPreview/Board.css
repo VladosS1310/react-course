@@ -1,0 +1,8 @@
+.boardPreview {
+    width: 150px;
+    height: 150px;
+    background: greenyellow;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}

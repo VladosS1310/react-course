@@ -1,0 +1,5 @@
+export enum ACTION_TYPES {
+    FETCH = '@@BOARDS/FETCH',
+    SET_BOARDS = '@@BOARDS/SET',
+    EDIT_BOARD = '@@BOARDS/EDIT_BOARD'
+}
